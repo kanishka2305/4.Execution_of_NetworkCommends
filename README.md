@@ -26,44 +26,31 @@ This commands includes
 • Other IP Commands e.g. show ip route etc.
 <BR>
 
-## Program:
-### Ping Command:
-### Client:
-```py
-import socket 
-from pythonping import ping 
-s=socket.socket() 
-s.bind(('localhost'8000)) 
-s.listen(5) 
-c,addr=s.accept() 
-while True: 
-    hostname=c.recv(1024).decode() 
-    try: 
-        c.send(str(ping(hostname, verbose=False)).encode()) 
-    except KeyError: 
-        c.send("Not Found".encode())
-```
-### Server:
-```py
-import socket 
-s=socket.socket() 
-s.connect(('localhost',8000)) 
-while True: 
-    ip=input("Enter the website you want to ping ") 
-    s.send(ip.encode()) 
-    print(s.recv(1024).decode())
-```
-## Output:
-### Client:
-![318509110-d4012c35-9f3a-48a4-8338-01a03a0bf810](https://github.com/kanishka2305/4.Execution_of_NetworkCommends/assets/113497357/0a7fe311-f629-4607-acfc-120d32907697)
+### OUTPUT:
+### IPCONFIG
+![329767835-6c16a147-1a50-46d8-9ac2-fca8d7171cbb](https://github.com/kanishka2305/4.Execution_of_NetworkCommends/assets/113497357/61eea183-4cd2-4265-80d3-8f15210c89d8)
 
-### Server:
-![318509220-41a703f5-1cd5-42fe-a821-d1533f4820ef](https://github.com/kanishka2305/4.Execution_of_NetworkCommends/assets/113497357/5119c6b4-cc1f-4afa-a6c8-ff5621a2f85a)
+### NBTSTAT
+![329767844-9bbb2485-d225-45bb-8cf9-94281b54083c](https://github.com/kanishka2305/4.Execution_of_NetworkCommends/assets/113497357/765cdc43-3206-4630-b05d-7b97395c8084)
 
-### TRANCEROUTE COMMAND:
-![318509371-ed1e8d7d-22d4-400f-b102-fefe2c182e45](https://github.com/kanishka2305/4.Execution_of_NetworkCommends/assets/113497357/322f66f6-fb30-4771-b673-8688d0d0d228)
+### NSLOOKUP
+![329767855-cf723c42-0381-4fa2-9443-ce6d7483b5ab](https://github.com/kanishka2305/4.Execution_of_NetworkCommends/assets/113497357/0d2e6f44-bbd4-4b04-b6c0-03b8ffff8183)
 
+### HOSTNAME
+![329767880-f416a6f3-a13a-4223-9499-a0dedabed4a7](https://github.com/kanishka2305/4.Execution_of_NetworkCommends/assets/113497357/fb738707-eda6-4d77-beb5-021f24b50700)
 
+### TRACERT
+![329767885-436f9c30-4ad2-4544-b66a-d1c6240c6427](https://github.com/kanishka2305/4.Execution_of_NetworkCommends/assets/113497357/d0dfe0af-b1ce-416f-8e7d-b4ad24c29b9f)
 
-## Result
+### PING
+![329767903-32c87ac3-c6dc-4cbf-88c4-bd573918aded](https://github.com/kanishka2305/4.Execution_of_NetworkCommends/assets/113497357/1df69f54-16e2-4426-801d-48b3b2136bd9)
+
+### NETSTAT
+![329767912-84f2c2cb-6b14-4cec-8701-07040f6104c4](https://github.com/kanishka2305/4.Execution_of_NetworkCommends/assets/113497357/fd359234-7100-4211-a0b5-6e993501e51d)
+
+### GETMAC
+![329767926-25c111ce-c4a9-42fa-8542-afe5c547cbe9](https://github.com/kanishka2305/4.Execution_of_NetworkCommends/assets/113497357/7cfe94db-fdf3-41e6-b519-ad132e51699c)
+
+## RESULT:
+
 Thus Execution of Network commands Performed 
